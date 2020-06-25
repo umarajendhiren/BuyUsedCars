@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView_used_car"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
+                android:imageUrl="@{model.imageUri}"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_make"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/make,model.make)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_used_car"
+                tools:text="make" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/model,model.model)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_make"
+                app:layout_constraintStart_toStartOf="@+id/tv_make"
+                app:layout_constraintTop_toBottomOf="@+id/tv_make"
+                tools:text="model" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/location,model.state)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_model"
+                app:layout_constraintStart_toStartOf="@+id/tv_model"
+                app:layout_constraintTop_toBottomOf="@id/tv_model"
+                tools:text="loacation" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{ Converters.addStringWithValue(@string/price,String.valueOf(model.price)+ '$')}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_location"
+                app:layout_constraintStart_toStartOf="@+id/tv_location"
+                app:layout_constraintTop_toBottomOf="@id/tv_location"
+                tools:text="price" />
+
+            <TextView
+                android:id="@+id/tv_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/numberofowner,String.valueOf(model.numberOfOwner))}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_price"
+                app:layout_constraintStart_toStartOf="@+id/tv_price"
+                app:layout_constraintTop_toBottomOf="@id/tv_price"
+                tools:text="owner" />
+
+
+            <TextView
+                android:id="@+id/tv_drivetype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/drivetype,model.driveType)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_owner"
+                app:layout_constraintStart_toStartOf="@+id/tv_owner"
+                app:layout_constraintTop_toBottomOf="@id/tv_owner"
+                tools:text="drivetype" />
+
+            <TextView
+                android:id="@+id/tv_fueltype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/fueltype,model.fuelType)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_drivetype"
+                app:layout_constraintStart_toStartOf="@+id/tv_drivetype"
+                app:layout_constraintTop_toBottomOf="@id/tv_drivetype"
+                tools:text="fueltype" />
+
+            <TextView
+                android:id="@+id/tv_transmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/transmission,model.transmission)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_fueltype"
+                app:layout_constraintStart_toStartOf="@+id/tv_fueltype"
+                app:layout_constraintTop_toBottomOf="@id/tv_fueltype"
+                tools:text="transmission" />
+
+            <TextView
+                android:id="@+id/tv_service_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/servicehistory,String.valueOf(model.numberOfServiceHistoryRecord))}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_transmission"
+                app:layout_constraintStart_toStartOf="@+id/tv_transmission"
+                app:layout_constraintTop_toBottomOf="@id/tv_transmission"
+                tools:text="ServiceHistory" />
+
+            <TextView
+                android:id="@+id/tv_milage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@{Converters.addStringWithValue(@string/milage,String.valueOf(model.mileage).concat(@string/miles))}"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_service_history"
+                app:layout_constraintStart_toStartOf="@+id/tv_service_history"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_history"
+                tools:text="milage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <data>
+
+        <import type="com.androidapps.buyusedcars.utilities.Converters" />
+
+        <variable
+            name="model"
+            type="com.androidapps.buyusedcars.model.UsedCarDetailsModel" />
+    </data>
+</layout>

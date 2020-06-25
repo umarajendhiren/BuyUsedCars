@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">BuyUsedCars</string>
+
+
+    <string name="header_filters">Filter</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="sort_by_rating">Sort by rating</string>
+    <string name="sort_by_popularity">Sort by popularity</string>
+    <string name="sort_by_price">Sort by price</string>
+
+
+    <string name="message_no_results">Oops! Could not find anything!</string>
+
+
+    <string name="sign_in_signup">LOGIN SIGN UP</string>
+    <string name="department">Shop By Deprtment</string>
+    <string name="order">Your Orders</string>
+    <string name="profile">My Profile</string>
+    <string name="wishlist">Wish List</string>
+    <string name="notification">Notification</string>
+
+
+    <!--For google integration-->
+    <string name="web_client_id">757339392912-qrns2bji8pgfpmtb0igorhqi9uqfhbd4.apps.googleusercontent.com</string>
+    <string name="name">uma</string>
+    <string name="mailId">uma2011ece@gmail.com</string>
+    <string name="navigation_drawer_open">Open Navigation drawer</string>
+    <string name="navigation_drawer_close">Close Navigation drawer</string>
+    <string name="login">LOGIN</string>
+    <string name="signup">SIGN UP</string>
+    <string name="help">Need Help</string>
+
+    <string name="message">Message</string>
+    <string name="communication">Communication</string>
+    <string name="share">Share</string>
+    <string name="chate">Chate</string>
+    <string name="signout">Sign Out</string>
+    <string name="title_activity_forgot_passord">ForgotPassord</string>
+    <string name="forgot_content">We will send you a reset link to reset your password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tab_search">TabSearchActivity</string>
+    <string name="tab_text_1">MAKE AND MODEL </string>
+    <string name="tab_text_2">BODY TYPE</string>
+    <string name="tab_text_3">SAVED SEARCH</string>
+    <string name="start_your_search">Start Your Search</string>
+    <string name="enter_your_search">Enter Your Search</string>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="search">Search</string>
+
+
+    <string name="space">\u0020</string>
+
+
+    <string name="mi">mi</string>
+
+
+    <string name="owner">Owner</string>
+
+    <string name="k">k</string>
+    <string name="service">Service History</string>
+    <string name="personal_use">Personal Use</string>
+    <string name="more_details">More Details</string>
+    <string name="make">Make</string>
+    <string name="model">Model</string>
+    <string name="price">Price</string>
+    <string name="year">Year</string>
+
+    <string name="numberofowner">Number Of Owner</string>
+
+    <string name="accident">Number Of Accident</string>
+    <string name="milage">Milage</string>
+    <string name="drivetype">Drive Type</string>
+    <string name="location">Location</string>
+    <string name="fueltype">Fuel Type</string>
+    <string name="servicehistory">Service History</string>
+    <string name="transmission">Transmission</string>
+    <string name="miles">Miles</string>
+    <string-array name="Exterior_color">
+        <item>Select a Exterior Color </item>
+        <item>Black</item>
+        <item>Blue</item>
+
+        <item>Brown</item>
+        <item>Gray</item>
+        <item>Red</item>
+
+        <item>White</item>
+        <item>Yellow</item>
+
+
+    </string-array>
+    <string-array name="Accident">
+        <item>No accident or damage reported</item>
+        <item>accident reported</item>
+    </string-array>
+    <string-array name="year_array">
+        <item>Select Year</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+    </string-array>
+    <string-array name="body_type">
+        <item>Select Body Type</item>
+        <item>Convertible</item>
+        <item>Coupe</item>
+        <item>Hatchback</item>
+        <item>Pickup</item>
+        <item>Sedan</item>
+
+    </string-array>
+    <string-array name="price_from">
+        <item>No Minimum</item>
+        <item>$5000</item>
+        <item>$10000</item>
+        <item>$15000</item>
+        <item>$20000</item>
+        <item>$25000</item>
+        <item>$30000</item>
+        <item>$35000</item>
+        <item>$40000</item>
+        <item>$45000</item>
+        <item>$50000</item>
+    </string-array>
+
+</resources>
+
+

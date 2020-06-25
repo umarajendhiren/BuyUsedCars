@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MoreDetailActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="You Have Empty WishList"
+            android:visibility="@{viewmodel.showEmpty}" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Please Login To View WishList!!!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:visibility="@{viewmodel.tvLogin}" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/spinnerLoading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="@{viewmodel.loading}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/result_recler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewmodel.recyclerViewVisibility}"
+            android:setAdapter="@{viewmodel.getAdapter()}" />
+
+    </FrameLayout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.androidapps.buyusedcars.viewmodels.WishListViewModel" />
+    </data>
+</layout>

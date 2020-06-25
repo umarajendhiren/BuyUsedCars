@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/recycler_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background"
+                android:onClick="@{()->viewModel.onClickMoreDetail(obj.documentKey)}"
+                android:padding="10dp"
+                android:text="@string/more_details"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_service" />
+
+            <ImageButton
+                android:id="@+id/ic_heart"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:onClick="@{()->viewModel.setWishList(obj.wish,obj.documentKey)}"
+                android:setsrc="@{obj.wish}"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+            </ImageButton>
+
+            <ImageView
+                android:id="@+id/imageView_used_car"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:imageUrl="@{obj.imageUri}"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ic_heart" />
+            <!-- android:onClick="@{listener::onClickView}"-->
+
+            <TextView
+                android:id="@+id/textView_year"
+                style="@style/TextAppearance"
+                android:text="@{String.valueOf(obj.year)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_used_car" />
+
+
+            <TextView
+                android:id="@+id/textView_make"
+                style="@style/TextAppearance"
+                android:text="@{obj.make}"
+                app:layout_constraintStart_toEndOf="@+id/textView_year"
+                app:layout_constraintTop_toBottomOf="@id/imageView_used_car" />
+
+            <TextView
+                android:id="@+id/textView_model"
+                style="@style/TextAppearance"
+                android:text="@{obj.model}"
+                app:layout_constraintStart_toEndOf="@+id/textView_make"
+                app:layout_constraintTop_toBottomOf="@id/imageView_used_car" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@{'$'+ String.valueOf(obj.price)}"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_year">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_miles"
+                style="@style/TextAppearance.second"
+                android:text="@{Converters.convertToKMi(obj.mileage)}"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                style="@style/TextAppearance.second"
+                android:text="@{obj.state}"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                app:layout_constraintStart_toEndOf="@+id/divider1"
+                app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+            <TextView
+                android:id="@+id/tv_noaccident"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+
+                android:accidentDetail="@{obj.numberOfOwner}"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_price" />
+
+            <TextView
+                android:id="@+id/tv_persnol"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:drawableStart="@drawable/ic_personal_use"
+                android:gravity="center_vertical"
+                android:text="  Personal Use"
+
+                app:layout_constraintStart_toStartOf="@id/guideline_verticle"
+                app:layout_constraintTop_toTopOf="@id/tv_noaccident" />
+
+            <TextView
+                android:id="@+id/textView_owner"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:noOfOwnerIcon="@{obj.numberOfOwner}"
+                android:text="@{ @string/space +@string/space+ String.valueOf(obj.numberOfOwner).concat(@string/space).concat(@string/owner)}"
+                app:layout_constraintStart_toStartOf="@id/tv_noaccident"
+                app:layout_constraintTop_toBottomOf="@id/tv_noaccident" />
+
+            <TextView
+                android:id="@+id/textView_service"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_service_record"
+                android:gravity="center_vertical"
+                android:text="@{ @string/space +@string/space+ String.valueOf(obj.numberOfServiceHistoryRecord).concat(@string/space).concat(@string/service)}"
+                app:layout_constraintStart_toStartOf="@id/tv_persnol"
+                app:layout_constraintTop_toTopOf="@id/textView_owner" />
+
+            <TextView
+                android:id="@+id/document_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{obj.documentKey}"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <View
+
+                android:id="@+id/divider"
+                style="@style/dividerStyle"
+
+                android:background="@color/dividerColor"
+                app:layout_constraintStart_toEndOf="@id/tv_price"
+                app:layout_constraintTop_toTopOf="@id/tv_price">
+
+            </View>
+
+
+            <View
+
+                android:id="@+id/divider1"
+                style="@style/dividerStyle"
+                android:background="@color/dividerColor"
+                app:layout_constraintStart_toEndOf="@id/tv_miles"
+                app:layout_constraintTop_toTopOf="@+id/tv_price"
+
+                ></View>
+
+            <View
+                android:id="@+id/card_divider"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorGray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_more" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_verticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <data>
+        /*This is used for android resources*/
+
+        <import type="com.androidapps.buyusedcars.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <import type="com.androidapps.buyusedcars.utilities.Converters"></import>
+
+        <variable
+            name="obj"
+            type="com.androidapps.buyusedcars.model.UsedCarDetailsModel" />
+
+        <variable
+            name="viewModel"
+            type="com.androidapps.buyusedcars.viewmodels.SearchResultViewModel" />
+
+        <variable
+            name="listener"
+            type="com.androidapps.buyusedcars.utilities.OnClickListenerHandler" />
+    </data>
+</layout>

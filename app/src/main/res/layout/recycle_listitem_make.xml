@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:onClick="@{()->viewModel.OnClickMake(obj.name)}"
+
+        >
+
+        <!-- android:onClick="@{listener::onClickView}"-->
+
+        <ImageView
+            android:id="@+id/imgView_make"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="32dp"
+            android:imageUrl="@{obj.imageUrl}"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_make"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:text="@{obj.name}"
+            app:layout_constraintBottom_toBottomOf="@id/imgView_make"
+            app:layout_constraintStart_toEndOf="@+id/imgView_make"
+            app:layout_constraintTop_toTopOf="@id/imgView_make"
+            tools:text="make"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <data>
+
+
+        <variable
+            name="obj"
+            type="com.androidapps.buyusedcars.model.MakeModel" />
+
+        <variable
+            name="viewModel"
+            type="com.androidapps.buyusedcars.viewmodels.MainViewModel" />
+
+        <variable
+            name="listener"
+            type="com.androidapps.buyusedcars.utilities.OnClickListenerHandler" />
+
+        <!--Now we can directly access member variables of UploadMakeAndModel pojo into xml using @{} annotation-->
+    </data>
+</layout>

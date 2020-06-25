@@ -4,8 +4,8 @@
 
 
 **The app has following packages:**
-   * **data**: It contains all the data accessing and manipulating components.
-    * **di:** Dependency providing classes using Dagger2.
+   * **data**: It contains all the data accessing and manipulating components./n
+    * **di:** Dependency providing classes using Dagger2./n
     * **ui:** View classes along with their corresponding ViewModel.
     * **utils:** Utility classes.
 

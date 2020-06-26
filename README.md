@@ -32,6 +32,6 @@
 
 
 
-![BuyUsedCars Demo](https://drive.google.com/file/d/1TFK8IRYrzgirUtx-OZIq0YWPZazEY-13/view?usp=sharing.gif)
+![BuyUsedCars Demo][(https://drive.google.com/file/d/1TFK8IRYrzgirUtx-OZIq0YWPZazEY-13/view?usp=sharing.gif)]
 
 

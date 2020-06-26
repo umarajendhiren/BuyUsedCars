@@ -2,6 +2,12 @@
 ### Firebase Project
 
 
+### Project Demo              
+![Search](https://user-images.githubusercontent.com/28978071/85894546-ef9fff00-b7c2-11ea-8059-ed1448bab833.gif)                               ![GoogleAuthentication](https://user-images.githubusercontent.com/28978071/85894073-0abe3f00-b7c2-11ea-9186-ff3c9098b8f1.gif)   
+
+
+
+
 **The app has following packages:**
 
 * **adapter**:Contain Recyclerviewadapters for views and binding adapters for databinding.
@@ -27,6 +33,6 @@
 * **volley**:to parse a  json object .
 * **picasso**:to load image from internet
 
-![Resized1](https://user-images.githubusercontent.com/28978071/85892562-28d67000-b7bf-11ea-95df-9ea5d5a6bd64.gif)
+
 
 

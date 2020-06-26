@@ -27,6 +27,6 @@
 * **volley**:to parse a  json object .
 * **picasso**:to load image from internet
 
-####![GoogleAuth](https://user-images.githubusercontent.com/28978071/85891978-1d367980-b7be-11ea-9ad6-48006be8facb.gif)
+![Resized1](https://user-images.githubusercontent.com/28978071/85892562-28d67000-b7bf-11ea-95df-9ea5d5a6bd64.gif)
 
 

@@ -1,8 +1,6 @@
 # BuyUsedCars
 ### Firebase Project
 
-![GoogleAuth](https://user-images.githubusercontent.com/28978071/85891978-1d367980-b7be-11ea-9ad6-48006be8facb.gif)
-
 
 **The app has following packages:**
 
@@ -29,6 +27,6 @@
 * **volley**:to parse a  json object .
 * **picasso**:to load image from internet
 
-
+####![GoogleAuth](https://user-images.githubusercontent.com/28978071/85891978-1d367980-b7be-11ea-9ad6-48006be8facb.gif)
 
 

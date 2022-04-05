@@ -1,5 +1,12 @@
 # BuyUsedCars
-### Firebase Project
+### Project overview:
+* Users can see a live, updated used car list and can also make a wishlist.
+
+* This project uses Firebase Firestore as a backend to store user data as a document.
+
+* I've used Firebase Authentication to make a personalized app.
+
+* I primarily used recyclerview for UI.
 
 
 ### Project Demo              
